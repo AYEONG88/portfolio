@@ -102,8 +102,9 @@ button{background-color: transparent; cursor: pointer; border:none; outline: non
 
 /* section common */
 .section{
-  padding:50px; text-align: center; max-width:1200px; margin:auto;
-}
+  padding:50px; text-align: center; margin:auto;}
+
+.section__container{max-width:1200px; margin:auto;}
 
 /* About */
 .about__majors{
@@ -128,3 +129,34 @@ button{background-color: transparent; cursor: pointer; border:none; outline: non
 .job__name, .job__period{color:var(--color-light-grey);}
 .job__name{font-size:var(--font-small);}
 .job__description{font-size:var(--font-micro);}
+
+/* Skill */
+#skills{background:var(--color-yellow);}
+
+.skillset{
+  display:flex; background-color:var(--color-light-grey);
+  margin:20px; color:var(--color-light-white);
+}
+
+
+.skillset__left{
+  flex-basis:60%; /*아이템의 크기가 자동적으로 늘어나게 함*/
+  padding:20px 40px; background-color:var(--color-dark-grey);
+}
+  .skillset__title{color:var(--color-white);}
+  .skill{margin-bottom:32px;}
+  .skill__description{display:flex; justify-content: space-between;}
+  .skill__bar{width:100%; height:3px; background-color: var(--color-grey);}
+  .skill__value{
+    /* 모두 동일 css가 적용되기때문에, width는 html태그에서 정의한다.
+    그리고 그 데이터들은 나중에 추출해서 jason에서 관리하고 
+    jason에서 동적으로 받아온 데이터를 html코드로 변환해서 자동으로 생성할거임 */
+    height:3px; background:var(--color-orange);
+  }
+
+
+.skillset__right{
+  flex-basis:40%;
+}
+  .tools, .etc{padding:20px;}
+  .tools{background-color: var(--color-grey);}
